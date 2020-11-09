@@ -16,7 +16,7 @@ import java.sql.DriverManager;
 public class CONEXION {
 
     private String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-    private String url = "jdbc:sqlserver://localhost:1433;databaseName=NORTHWIND";
+    private String url = "jdbc:sqlserver://localhost:1433;databaseName=Northwind";
     private String user = "sa";
     private String pass = "123456";
 
@@ -25,6 +25,7 @@ public class CONEXION {
 
     public Connection conectar() {
         try {
+                        System.out.println("EXITO");
             Class.forName(driver);
             return (DriverManager.getConnection(url, user, pass));
         } catch (Exception e) {
